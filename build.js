@@ -10,7 +10,7 @@ const path = require('path')
 ///////////////////////////////////////////////////////////////////////////////
 
 const title = `${bold(`👨‍⚖️️ Afrizal Muhammad Yasin 👳️`)} · 🗣️ Afrizal Yasin 💢️`
-const subtitle = `      🏙️ Surabaya, ID 🇮🇩️· ${b(`📧️afrizal@afrizal.web.id📬️`)}`
+const subtitle = `      🏙️ Surabaya, ID · ${b(`afrizal@afrizal.web.id`)}`
 const header = `${title}\n${subtitle}`
 
 ///////////////////////////////////////////////////////////////////////////////
