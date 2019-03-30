@@ -1,7 +1,7 @@
 {
   "name": "afrizalmy",
   "description": "npx afrizal to view my digital card 🃏",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "repository": "https://gitlab.com/afrizal-my/card.git",
   "author": "Afrizal Yasin <afrizal@afrizal.web.id>",
   "main": "bin/card.js",

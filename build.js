@@ -9,18 +9,19 @@ const path = require('path')
 
 ///////////////////////////////////////////////////////////////////////////////
 
-const title = `${bold(`Afrizal Muhammad Yasin`)} · Afrizal Yasin`
-const subtitle = `       Surabaya, ID · ${b(`afrizal@afrizal.web.id`)}`
+const title = `${bold(`👨‍⚖️️ Afrizal Muhammad Yasin 👳️`)} · 🗣️ Afrizal Yasin 💢️`
+const subtitle = `      🏙️ Surabaya, ID 🇮🇩️· ${b(`📧️afrizal@afrizal.web.id📬️`)}`
 const header = `${title}\n${subtitle}`
 
 ///////////////////////////////////////////////////////////////////////////////
 
 const list = {
-  [bold(`  Now in`)]: `Student in UPN "Veteran" Jawa Timur`,
-  [bold(` Twitter`)]: b(`https://twitter.com/afrizalpatlas`),
-  [bold(`  GitHub`)]: b(`https://github.com/afrizal423`),
-  [bold(`  GitLab`)]: b(`https://gitlab.com/afrizal-my`),
-  [bold(` Website`)]: b(`https://afrizal.web.id`),
+  [bold(`  Now in👨‍💻️`)]: `Student in UPN "Veteran" Jawa Timur`,
+  [bold(` Twitter🕶️`)]: b(`https://twitter.com/afrizalpatlas`),
+  [bold(`Facebook📘️`)]: b(`https://facebook.com/rizal.htmI`),
+  [bold(`  GitHub💻️`)]: b(`https://github.com/afrizal423`),
+  [bold(`  GitLab🖥️`)]: b(`https://gitlab.com/afrizal-my`),
+  [bold(` Website🔮️`)]: b(`https://afrizal.web.id`),
 }
 
 const renderedList = Object.keys(list)
