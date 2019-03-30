@@ -2,7 +2,7 @@
 
 # afrizalmy/card
 
-`npx afrizalmy` to view my digital card 🃏
+`npx afrizalmy` to view my digital card 🃏🚀️
 
 ![preview](preview.png)
 
