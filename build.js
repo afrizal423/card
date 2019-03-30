@@ -16,7 +16,7 @@ const header = `${title}\n${subtitle}`
 ///////////////////////////////////////////////////////////////////////////////
 
 const list = {
-  [bold(`  Now in🚀️`)]: `Student in UPN "Veteran" Jawa Timur`,
+  [bold(`  Now in🚀️`)]: `Student at UPN "Veteran" Jawa Timur`,
   [bold(` Twitter🕶️ `)]: b(`https://twitter.com/afrizalpatlas`),
   [bold(`Facebook📘️`)]: b(`https://facebook.com/rizal.htmI`),
   [bold(`  GitHub💻️`)]: b(`https://github.com/afrizal423`),
