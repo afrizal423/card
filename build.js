@@ -10,7 +10,7 @@ const path = require('path')
 ///////////////////////////////////////////////////////////////////////////////
 
 const title = `${bold(`🤵️ Afrizal Muhammad Yasin 👳️`)} · Afrizal Yasin `
-const subtitle = `      🏙️ Surabaya, ID · ${b(`afrizal@afrizal.web.id`)}`
+const subtitle = `      🏙️ Surabaya, ID · ${b(`me@afrizalmy.com`)}`
 const header = `${title}\n${subtitle}`
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -21,7 +21,7 @@ const list = {
   [bold(`Facebook📘️`)]: b(`https://facebook.com/rizal.htmI`),
   [bold(`  GitHub💻️`)]: b(`https://github.com/afrizal423`),
   [bold(`  GitLab🖥️ `)]: b(`https://gitlab.com/afrizal-my`),
-  [bold(` Website🔮️`)]: b(`https://afrizal.web.id`),
+  [bold(` Website🔮️`)]: b(`https://afrizalmy.com`),
 }
 
 const renderedList = Object.keys(list)
@@ -47,6 +47,7 @@ fs.writeFileSync(
       left: 6,
       right: 6,
     },
+    borderStyle: 'round'
   })
 )
 
