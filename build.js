@@ -1,54 +1,72 @@
-#!/usr/bin/env node
-
 'use strict'
 
-const boxen = require('boxen')
-const { bold, blueBright: b } = require('chalk').default
-const fs = require('fs')
-const path = require('path')
+// Pull in our modules
+import chalk from 'chalk';
+import boxen from 'boxen';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-///////////////////////////////////////////////////////////////////////////////
 
-const title = `${bold(`🤵️ Afrizal Muhammad Yasin 👳️`)} · Afrizal Yasin `
-const subtitle = `      🏙️ Surabaya, ID · ${b(`me@afrizalmy.com`)}`
-const header = `${title}\n${subtitle}`
+// const boxen = require('boxen')
+// const fs = require('fs')
+// const path = require('path')
 
-///////////////////////////////////////////////////////////////////////////////
-
-const list = {
-  [bold(`  Now in🚀️`)]: `Student at UPN "Veteran" Jawa Timur`,
-  [bold(` Twitter🕶️ `)]: b(`https://twitter.com/afrizalpatlas`),
-  [bold(`Facebook📘️`)]: b(`https://facebook.com/rizal.htmI`),
-  [bold(`  GitHub💻️`)]: b(`https://github.com/afrizal423`),
-  [bold(`  GitLab🖥️ `)]: b(`https://gitlab.com/afrizal-my`),
-  [bold(` Website🔮️`)]: b(`https://afrizalmy.com`),
+// Define options for Boxen
+const options = {
+  padding: 1,
+  margin: 1,
+  borderStyle: 'round'
 }
 
-const renderedList = Object.keys(list)
-  .map(l => `${l}: ${list[l]}`)
-  .join('\n')
+// Text + chalk definitions
+const data = {
+  name: chalk.white('           Afrizal Muhammad Yasin'),
+  handle: chalk.white(''),
+  work: chalk.white('Freelancer Web Developer'),
+  twitter: chalk.gray('https://twitter.com/') + chalk.cyan('zalabs02'),
+  npm: chalk.gray('https://npmjs.com/') + chalk.red('~afrizalmy'),
+  packagist: chalk.gray('https://packagist.org/packages/') + chalk.redBright('afrizalmy'),
+  github: chalk.gray('https://github.com/') + chalk.green('afrizal423'),
+  linkedin: chalk.gray('https://linkedin.com/in/') + chalk.blue('afrizalmuhammadyasin'),
+  web: chalk.cyan('https://afrizalmy.com'),
+  npx: chalk.red('npx') + ' ' + chalk.white('afrizalmy'),
+  labelWork: chalk.white.bold('   Now in:'),
+  labelTwitter: chalk.white.bold('  Twitter:'),
+  labelPackagist: chalk.white.bold('Packagist:'),
+  labelnpm: chalk.white.bold('      NPM:'),
+  labelGitHub: chalk.white.bold('   GitHub:'),
+  labelLinkedIn: chalk.white.bold(' LinkedIn:'),
+  labelWeb: chalk.white.bold('      Web:'),
+  labelCard: chalk.white.bold('     Card:')
+}
 
-///////////////////////////////////////////////////////////////////////////////
+// Actual strings we're going to output
+const newline = '\n'
+const heading = `${data.name}  ${data.handle}`
+const working = `${data.labelWork}  ${data.work}`
+const twittering = `${data.labelTwitter}  ${data.twitter}`
+const packagisting = `${data.labelPackagist}  ${data.packagist}`
+const npming = `${data.labelnpm}  ${data.npm}`
+const githubing = `${data.labelGitHub}  ${data.github}`
+const linkedining = `${data.labelLinkedIn}  ${data.linkedin}`
+const webing = `${data.labelWeb}  ${data.web}`
+const carding = `${data.labelCard}  ${data.npx}`
 
-const footer = `${bold(`    Card`)}: npx afrizalmy`
+// Put all our output together into a single variable so we can use boxen effectively
+const output = heading + // data.name + data.handle
+               newline + newline + // Add one whole blank line
+               working + newline + // data.labelWork + data.work
+               twittering + newline + // data.labelTwitter + data.twitter
+               packagisting + newline + 
+               npming + newline + // data.labelnpm + data.npm
+               githubing + newline + // data.labelGitHub + data.github
+               linkedining + newline + // data.labelLinkedIn + data.linkedin
+               webing + newline + newline + // data.labelWeb + data.web
+               carding // data.labelCard + data.npx
 
-///////////////////////////////////////////////////////////////////////////////
+const __filename = fileURLToPath(import.meta.url);
 
-const cardContent = `${header}\n\n${renderedList}\n\n${footer}`
+const __dirname = path.dirname(__filename);
 
-fs.writeFileSync(
-  path.join(__dirname, 'bin/output'),
-  boxen(cardContent, {
-    borderColor: 'blue',
-    margin: 1,
-    padding: {
-      top: 1,
-      bottom: 1,
-      left: 6,
-      right: 6,
-    },
-    borderStyle: 'round'
-  })
-)
-
-// huge thanks to https://github.com/bnb/bitandbang
+fs.writeFileSync(path.join(__dirname, 'bin/output'), chalk.green(boxen(output, options)))

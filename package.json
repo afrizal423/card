@@ -1,27 +1,23 @@
 {
   "name": "afrizalmy",
-  "description": "npx afrizal to view my digital card 🃏",
-  "version": "1.1.7",
-  "repository": "https://gitlab.com/afrizal-my/card.git",
-  "author": "Afrizal Yasin <afrizal@afrizal.web.id>",
-  "main": "bin/card.js",
+  "version": "2.0.0",
+  "description": "A personal card for Afrizalmy",
+  "main": "/bin/card.js",
   "bin": {
-    "grikomsn": "bin/card.js"
+    "bitandbang": "./bin/card.js"
   },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afrizal423/card.git"
+  },
+  "homepage": "https://afrizalmy.com",
   "scripts": {
     "prepublish": "npm run build",
     "build": "node build.js",
     "dev": "npm run build && node ./bin/card.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "standard"
   },
-  "devDependencies": {
-    "boxen": "^2.1.0",
-    "chalk": "^2.4.1"
-  },
-  "files": [
-    "bin/card.js",
-    "bin/output"
-  ],
   "keywords": [
     "card",
     "npm",
@@ -30,5 +26,19 @@
     "npx card",
     "business card"
   ],
-  "license": "MIT"
+  "author": "Afrizal Muhammad Yasin <me@afrizalmy.com> (http://afrizalmy.com)",
+  "license": "MIT",
+  "files": [
+    "bin/card.js",
+    "bin/output"
+  ],
+  "devDependencies": {
+    "boxen": "^7.0.0",
+    "chalk": "^5.0.1",
+    "standard": "^17.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/afrizal423/card/issues"
+  },
+  "dependencies": {}
 }
