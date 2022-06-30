@@ -56,7 +56,7 @@ const carding = `${data.labelCard}  ${data.npx}`
 // Put all our output together into a single variable so we can use boxen effectively
 const output = heading + // data.name + data.handle
                newline + newline + // Add one whole blank line
-               working + newline + // data.labelWork + data.work
+              //  working + newline + // data.labelWork + data.work
                twittering + newline + // data.labelTwitter + data.twitter
                packagisting + newline + 
                npming + newline + // data.labelnpm + data.npm
